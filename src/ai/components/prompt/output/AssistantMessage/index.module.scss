@@ -1,0 +1,52 @@
+.outputGenericMarkdown {
+  flex: 1;
+  flex-grow: 1;
+  overflow: auto;
+  transition: all 0.6s linear;
+  padding: 0;
+  position: relative;
+  pointer-events: all;
+  border-radius: 4px;
+  padding: 0;
+  color: #efefef;
+  font-size: 1rem;
+  line-height: 1.5;
+  * {
+    line-height: 1.5;
+  }
+  blockquote {
+    border-left: solid 3px grey;
+    padding-left: 1rem;
+    margin-left: 0;
+  }
+  code {
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.125);
+    padding: 2px 3px 4px;
+  }
+  pre code {
+    // white-space: pre-wrap;
+    display: block;
+    overflow: auto;
+    padding: 15px;
+  }
+  p {
+    margin: 0.85rem 0;
+  }
+  ol,
+  ul,
+  li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  li {
+    margin: 1rem 0 0 0.67rem;
+    padding: 0 0 0 0.33rem;
+    list-style: square;
+  }
+}
+
+.Markdown {
+  padding-left: 2px;
+}

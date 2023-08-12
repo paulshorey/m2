@@ -1,0 +1,260 @@
+[data-bg] {
+  background-color: var(--color-bg);
+}
+[data-fg] {
+  color: var(--color-text);
+}
+[data-bggradient='true'] {
+  color: var(--color-text);
+  background: var(--color-bg);
+  background-image: var(--color-bg-gradient);
+}
+[data-textgradient='true'] {
+  background: initial;
+  background-color: var(--color-text);
+  background-image: var(--color-text-gradient);
+  background-size: 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+:root {
+  --color-red: #e30000;
+  --color-yellow: #e38935;
+  --color-green: #27b30d;
+  --color-blue: #1ea7fd;
+  --color-purple: #c336e5;
+
+  --color-error: var(--color-red);
+  --color-warning: var(--color-yellow);
+  --color-success: var(--color-green);
+  --color-info: var(--color-blue);
+  --color-notice: var(--color-purple);
+
+  --color-cta: hsl(176deg 54% 50%);
+  --color-accent: hsl(42, 99%, 68%);
+  --color-glow: hsla(0deg, 0%, 100%, 0.125);
+
+  --color-neutral-800: #333;
+}
+:root,
+[data-bg='dark'] {
+  --color-bg: #333;
+  --color-bg-gradient: radial-gradient(75% 75% at top center, #222, #333, #222);
+}
+:root,
+[data-fg='light'] {
+  --color-text: hsl(95deg 9% 95%);
+  --color-text-gradient: linear-gradient(
+    120deg,
+    hsl(95deg 9% 90%),
+    hsl(95deg 9% 97%)
+  );
+}
+
+[data-bg='purple'] {
+  --color-accent: hsl(36, 99%, 68%);
+}
+/*
+ * 
+ * ⬆ ABOVE IS REQUIRED (but feel free to edit any of the values, or add your own)
+ * ⬇ BELOW IS OPTIONAL (ok to delete if you dont need more than one color scheme)
+ *
+ */
+
+/*
+ * Dark text on light background
+ * `<div data-bg="light">` or `<div data-fg="dark">`
+ */
+[data-bg='light'] {
+  --color-bg: hsl(95deg 9% 95%);
+  --color-bg-gradient: linear-gradient(
+    120deg,
+    hsl(95deg 9% 90%),
+    hsl(95deg 9% 97%)
+  );
+}
+[data-bg='light'],
+[data-fg='dark'] {
+  --color-text: hsla(0, 0%, 20%, 93%);
+  --color-text-gradient: radial-gradient(
+    75% 75% at top center,
+    hsla(257, 42%, 28%, 75%),
+    hsla(257, 42%, 28%, 85%)
+  );
+  --color-glow: hsla(272, 51%, 54%, 0.25);
+  --color-cta: hsl(194deg 94% 46%);
+  --color-accent: #ffa500;
+}
+
+/*
+ * Purple
+ */
+[data-fg='purple'] {
+  --color-text: hsl(245, 65%, 75%); /* hsl(250, 60%, 60%);*/
+  --color-text-gradient: linear-gradient(
+    333deg,
+    hsl(260 55% 65%),
+    hsl(245, 75%, 80%)
+  );
+}
+[data-bg='light'] [data-fg='purple'],
+[data-bg='light'][data-fg='purple'] {
+  --color-text: hsl(250, 45%, 53%); /* hsl(250, 60%, 60%);*/
+  --color-text-gradient: linear-gradient(
+    333deg,
+    hsl(270 45% 51%),
+    hsl(245, 70%, 67%)
+  );
+}
+[data-bg='purple'] {
+  --color-bg: hsl(245deg 55% 55%); /* hsl(250, 60%, 60%);*/
+  --color-bg-gradient: linear-gradient(
+    333deg,
+    hsl(270 50% 50%),
+    hsl(245, 75%, 67%)
+  );
+}
+
+/*
+ * Accent
+ */
+[data-fg='accent'] {
+  --color-text: var(--color-accent);
+  --color-text-gradient: linear-gradient(#fece5c, #ffa500);
+}
+
+/*
+ * Cool
+ */
+[data-fg='cool'] {
+  --color-text: hsl(190, 65%, 70%);
+  --color-text-gradient: linear-gradient(
+    hsl(170, 65%, 80%),
+    hsl(200, 65%, 60%)
+  );
+}
+[data-bg='light'] [data-fg='cool'] {
+  /* darker and brighter more saturation version of data-bg='cool' colors: */
+  --color-text: hsl(194, 89%, 47%);
+  --color-text-gradient: linear-gradient(
+    hsl(182, 62%, 52%),
+    hsl(212, 52%, 52%)
+  );
+}
+[data-bg='cool'] {
+  --color-bg: hsl(194, 69%, 67%);
+  --color-bg-gradient: linear-gradient(hsl(167, 37%, 59%), hsl(220, 90%, 75%));
+}
+[data-bg='light'] [data-bg='cool'] {
+  /* darker and brighter more saturation version of data-bg='cool' colors: */
+  --color-bg: hsl(194, 89%, 37%);
+  --color-bg-gradient: linear-gradient(hsl(167, 57%, 29%), hsl(220, 100%, 45%));
+}
+
+/*
+ * Rainbow
+ */
+[data-fg='rainbow'] {
+  --color-text: orange;
+  --color-text-gradient: linear-gradient(
+    55deg,
+    hsl(16, 90%, 68%) -20%,
+    hsl(36, 90%, 50%),
+    hsl(50, 88%, 53%),
+    hsl(50, 90%, 70%),
+    hsl(70, 85%, 57%),
+    hsl(167, 50%, 65%),
+    hsl(239, 100%, 79%) 106%
+  );
+}
+[data-bg='rainbow'] {
+  --color-bg: orange;
+  --color-bg-gradient: linear-gradient(
+    55deg,
+    rgb(245, 139, 101) -12%,
+    rgba(255, 154, 0, 1),
+    rgb(245, 208, 23),
+    rgb(255, 236, 95),
+    rgb(205, 235, 55),
+    rgb(121, 210, 191),
+    rgb(146, 147, 255) 106%
+  );
+}
+[data-bg='light'] [data-fg='rainbow'] {
+  --color-text: orange;
+  --color-text-gradient: linear-gradient(
+    160deg,
+    rgb(255, 75, 75),
+    rgb(252, 84, 84),
+    rgba(255, 154, 0, 1),
+    rgb(245, 208, 23),
+    rgba(208, 222, 33, 1),
+    rgb(185, 234, 27),
+    rgba(79, 220, 74, 1),
+    rgba(63, 218, 216, 1),
+    rgba(47, 201, 226, 1),
+    rgb(51, 146, 255),
+    rgb(210, 86, 255),
+    rgb(255, 87, 233)
+  );
+}
+[data-bg='light'] [data-bg='rainbow'] {
+  --color-bg: orange;
+  --color-bg-gradient: linear-gradient(
+    160deg,
+    rgb(255, 75, 75),
+    rgb(252, 84, 84),
+    rgba(255, 154, 0, 1),
+    rgb(245, 208, 23),
+    rgba(208, 222, 33, 1),
+    rgb(185, 234, 27),
+    rgba(79, 220, 74, 1),
+    rgba(63, 218, 216, 1),
+    rgba(47, 201, 226, 1),
+    rgb(51, 146, 255),
+    rgb(210, 86, 255),
+    rgb(255, 87, 233)
+  );
+}
+
+/*
+ * CTA buttons and banners
+ */
+[data-fg='cta'] {
+  --color-text: var(--color-cta);
+  --color-text-gradient: linear-gradient(
+    90deg,
+    hsl(39, 100%, 50%),
+    hsl(51, 100%, 50%),
+    hsl(51, 100%, 50%),
+    hsl(39, 100%, 50%)
+  );
+}
+[data-bg='cta'] {
+  --color-bg: var(--color-cta);
+  --color-bg-gradient: linear-gradient(
+    90deg,
+    hsl(39, 100%, 50%),
+    hsl(51, 100%, 50%),
+    hsl(51, 100%, 50%),
+    hsl(39, 100%, 50%)
+  );
+}
+[data-bg='light'] [data-fg='cta'] {
+  --color-text: var(--color-cta);
+  --color-text-gradient: linear-gradient(
+    90deg,
+    hsl(171, 76%, 39%),
+    hsl(171, 60%, 34%)
+  );
+}
+[data-bg='light'] [data-bg='cta'] {
+  --color-bg: var(--color-cta);
+  --color-bg-gradient: linear-gradient(
+    90deg,
+    hsl(171, 76%, 39%),
+    hsl(171, 60%, 34%)
+  );
+}

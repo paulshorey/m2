@@ -1,0 +1,14 @@
+.container {
+  user-select: none;
+  position: relative;
+  z-index: 1000;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.125);
+  box-shadow: 0 1px 1.33rem rgba(0, 0, 0, 0.33);
+}

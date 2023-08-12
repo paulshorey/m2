@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+}
+
+a {
+  display: inline;
+  color: inherit;
+  text-underline-offset: 0.125em;
+}
+
+svg {
+  display: inline-block;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  box-sizing: border-box;
+  position: relative;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li,
+blockquote,
+code {
+  user-select: text;
+}
+
+button {
+  background: none;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}

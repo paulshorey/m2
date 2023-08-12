@@ -1,0 +1,10 @@
+.component {
+  &[data-position='above'] {
+    top: -0.75rem;
+    right: -0.25rem;
+  }
+  &[data-position='below'] {
+    bottom: -0.75rem;
+    right: -0.25rem;
+  }
+}

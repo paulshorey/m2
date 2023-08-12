@@ -1,0 +1,44 @@
+.overlay {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  overflow: auto;
+  transition: opacity 0.6s linear;
+  opacity: 0;
+  pointer-events: none;
+}
+.container {
+  height: 100vh;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+.answers {
+  flex: 1;
+  overflow: auto;
+  transition: all 0.6s linear;
+  padding: 0;
+  position: relative;
+}
+.questions {
+  /*
+   * dvh = dynamic screen width (accounting for mobile browser address bar and buttons)
+   * 42px = header height - should replace with a variable
+   * 5px = a little breathing room below header, above full-height expanded content
+   */
+  max-height: calc(100vh - 42px - 5px);
+  max-height: calc(100dvh - 42px - 5px);
+  position: relative;
+  z-index: 100;
+  transition: flex 0.6s linear;
+  flex: unset;
+}

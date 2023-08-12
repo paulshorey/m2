@@ -1,0 +1,22 @@
+.outputCodeOnly {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 0.3rem 0.67rem 0;
+  color: #efefef;
+  font-size: 1rem;
+  blockquote {
+    border-left: solid 3px grey;
+    padding-left: 1rem;
+    margin-left: 0;
+  }
+  textarea {
+    flex-grow: 1;
+    width: 100%;
+    background: transparent;
+    color: #efefef;
+    font-size: 1rem;
+    padding: 0.4rem 1.2rem;
+  }
+}

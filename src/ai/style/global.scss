@@ -1,0 +1,55 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+}
+
+body {
+  font-family: var(--primary-font, Helvetica), sans-serif;
+}
+
+@mixin gradient-text {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: var(--color-blue);
+  background-color: var(--color-blue);
+  background-image: linear-gradient(
+    135deg,
+    var(--color-blue) 10%,
+    var(--color-purple)
+  );
+  background-size: 100%;
+}
+
+.gradientText {
+  @include gradient-text;
+}
+.gradientTextHover {
+  &:hover > * {
+    @include gradient-text;
+  }
+}
+
+.gradientBorderBottom {
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    display: block;
+    height: 1px;
+    background: linear-gradient(
+      135deg,
+      var(--color-blue) 10%,
+      var(--color-purple) 90%
+    );
+  }
+}
+
+.noWrap {
+  white-space: nowrap;
+}

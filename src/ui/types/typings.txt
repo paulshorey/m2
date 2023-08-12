@@ -1,0 +1,16 @@
+/*
+ * Work in progress...
+ */
+import { styleProps, styleProp as stylePropType } from './styles';
+import themeType from './theme';
+
+declare global {
+  type props = styleProps;
+  type theme = themeType;
+  type styleProp = stylePropType;
+}
+
+declare module '*.md' {
+  const content: string;
+  export = content;
+}

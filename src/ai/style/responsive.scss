@@ -1,0 +1,31 @@
+html {
+  // Default
+  font-size: 19px;
+
+  // Larger
+  @media (min-width: 1920px) {
+    // FullHD - mainly for presentations on a TV
+    font-size: 22px;
+  }
+  @media (min-width: 2800px) {
+    // 4K - for those with superhuman vision
+    font-size: 23px;
+  }
+
+  // Smaller
+  @media (max-width: 960px) {
+    font-size: 18.5px;
+  }
+  @media (max-width: 480px) {
+    font-size: 18px;
+  }
+  @media (max-width: 400px) {
+    font-size: 17px;
+  }
+  @media (max-width: 360px) {
+    font-size: 16.5px;
+  }
+  @media (max-width: 320px) {
+    font-size: 15px;
+  }
+}

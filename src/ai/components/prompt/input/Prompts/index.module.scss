@@ -1,0 +1,117 @@
+@keyframes rainbow {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
+}
+
+.rainbowGradient {
+  background: linear-gradient(
+    90deg,
+    hsla(39, 100%, 50%, 1),
+    hsla(50, 90%, 50%, 1),
+    hsla(100, 100%, 33%, 0.5),
+    hsla(230, 100%, 50%, 0),
+    hsla(230, 100%, 50%, 0),
+    hsla(285, 80%, 50%, 0.5),
+    hsla(300, 76%, 72%, 1)
+  );
+  background-size: 200% 200%;
+  animation: rainbow 3s linear infinite;
+}
+
+.container {
+  /*
+   * dvh = dynamic screen width (accounting for mobile browser address bar and buttons)
+   * 42px = header height - should replace with a variable
+   * 5px = a little breathing room below header, above full-height expanded content
+   */
+  max-height: calc(100vh - 42px - 5px);
+  max-height: calc(100dvh - 42px - 5px);
+  position: relative;
+  z-index: 100;
+  transition: flex 0.6s linear;
+  flex: unset;
+  /*
+   * 
+   */
+  user-select: none;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  display: block;
+  overflow: auto;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  background: #7b66d6;
+  box-shadow: 0 -1px 1.33rem rgba(0, 0, 0, 0.33);
+  label {
+    font-size: 0.9em;
+    margin: 0.11em 0;
+  }
+  .texts {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  .numberInputs {
+    flex: 0;
+    margin: 1.25rem 0;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    > * {
+      &:first-child {
+        [class*='MuiInputBase-root'] {
+          border-top-right-radius: 0 !important;
+          border-bottom-right-radius: 0 !important;
+        }
+      }
+      &:last-child {
+        [class*='MuiInputBase-root'] {
+          border-top-left-radius: 0 !important;
+          border-bottom-left-radius: 0 !important;
+        }
+      }
+      &:not(:first-child):not(:last-child) {
+        [class*='MuiInputBase-root'] {
+          border-radius: 0 !important;
+          border-right-width: 0 !important;
+        }
+      }
+    }
+  }
+  .buttonHint {
+    margin-right: 0.5rem;
+    color: #666;
+    opacity: 0.5;
+  }
+  .buttons {
+    padding: 0.11rem 0 0.33rem;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    .buttonsSubmit {
+      flex: 0;
+      display: flex;
+    }
+  }
+}
+
+.showAdvancedOptionsExpandable {
+  width: 100%;
+  > div {
+    padding-top: 0.25rem;
+  }
+}

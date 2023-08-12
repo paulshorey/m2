@@ -1,0 +1,84 @@
+.default {
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  vertical-align: middle;
+  box-sizing: content-box;
+  outline: none;
+  letter-spacing: 0;
+  text-transform: unset;
+  white-space: nowrap;
+  min-width: 0;
+  font-weight: 400;
+  letter-spacing: 0.33px;
+  color: var(--color-text);
+  background: transparent;
+  text-shadow: none !important;
+  input {
+    border: solid 1px var(--color-text);
+    box-shadow: 1px 2px 3px 0 hsl(0, 0%, 0%, 0.15);
+    border-radius: 0.4em;
+    margin-right: 0.5rem;
+  }
+  /**
+   * Sizes
+   */
+  &.default {
+    padding: 0.33rem;
+    input {
+      font-size: 1rem;
+    }
+  }
+  &.xs {
+    input {
+      font-size: 0.75rem;
+    }
+  }
+  &.sm {
+    input {
+      font-size: 0.85rem;
+    }
+  }
+  &.lg {
+    input {
+      font-size: 1.125rem;
+    }
+  }
+  &.xl {
+    input {
+      font-size: 1.5rem;
+    }
+  }
+
+  /**
+   * Children and pseudo elements
+   */
+  &:hover,
+  &:focus {
+    outline: solid 2px var(--color-cta);
+  }
+  &:hover,
+  &:focus:not(:hover) {
+    background-size: 200% auto;
+    transition: background-position 300ms linear 0s,
+      background-size 300ms linear 0s;
+    background-position: right center;
+  }
+  &:hover:not(:focus) {
+    outline: none !important;
+  }
+  &:hover {
+    box-shadow: 0 0 0 2px var(--color-cta) !important;
+  }
+}
+
+.round {
+  input {
+    border-radius: 100px;
+  }
+}

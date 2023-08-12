@@ -1,0 +1,50 @@
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-height: 100vh;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  > * {
+    flex-grow: 1;
+  }
+}
+.panel {
+  overflow: auto;
+  width: 100%;
+}
+.summary {
+  > div > div {
+    width: 100%;
+    text-align: left;
+    padding: 0 0 0 0;
+    margin: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    span {
+      font-size: 0.875rem;
+      line-height: 1;
+      font-weight: 500;
+    }
+    svg {
+      margin-right: 0.875rem;
+    }
+  }
+}
+.details {
+  overflow: auto;
+  padding: 30px;
+  margin: 0;
+  text-indent: 0;
+  p {
+    padding: 0 0 30px;
+    margin: 0;
+    text-indent: 0;
+  }
+}

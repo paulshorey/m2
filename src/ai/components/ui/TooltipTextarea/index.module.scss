@@ -1,0 +1,59 @@
+.targetContainer {
+  position: relative;
+  .tooltipContainer {
+    position: absolute;
+    right: 0;
+    .tooltip {
+      position: absolute;
+      height: 20px;
+      line-height: 20px;
+      top: -1px;
+      left: 0;
+      overflow: hidden;
+      display: flex;
+      flex-direction: row;
+      align-items: stretch;
+      justify-content: stretch;
+      z-index: 1000;
+      .tooltipArrowContainer {
+        flex: 1;
+        flex-grow: 1;
+        position: relative;
+        display: block;
+        aspect-ratio: 0.4;
+        overflow: hidden;
+        .tooltipArrow {
+          position: absolute;
+          display: block;
+          // border: solid 1px grey;
+          transform: rotate(45deg);
+          aspect-ratio: 1;
+          height: 75%;
+          top: 12.5%;
+          margin: 0 0 0 3px;
+          padding: 0;
+          border-right: none;
+          border-top: none;
+          border-radius: 2px;
+          backdrop-filter: blur(10px) brightness(0.7);
+        }
+      }
+      .tooltipContent {
+        flex: 1;
+        flex-grow: 1;
+        display: block;
+        backdrop-filter: blur(10px) brightness(0.67);
+        // border: solid 1px grey;
+        border-left: none;
+        border-radius: 3px;
+        margin: 0;
+        padding: 0 0.5rem 0 0.2875rem;
+        &,
+        * {
+          line-height: 17px;
+          font-size: 0.9em;
+        }
+      }
+    }
+  }
+}

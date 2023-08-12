@@ -1,0 +1,12 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "nextjs",
+  "buildCommand": "yarn build",
+  "devCommand": "yarn dev",
+  "installCommand": "cd ../.. && rm -rf apis && yarn install --scope=@ps/techy",
+  "git": {
+    "deploymentEnabled": {
+      "main": true
+    }
+  }
+}

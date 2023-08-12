@@ -1,0 +1,43 @@
+{
+  // base config - common to all apps and modules in the repository:
+  "extends": "./tsconfig.react-library.json",
+  // specific overrides - for this project only:
+  "include": [
+    "./components/**/*",
+    "src/hooks/**/*",
+    "src/styles/**/*",
+    "./types/**/*",
+    "./data/**/*",
+    "./functions/**/*", "functions/isPropValid.ts",, ", "v1/containers"v0/CodeBlock"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "umd",
+    "esm",
+    "out",
+    "test",
+    ".next",
+    ".backup",
+    "public",
+    "storybook-static",
+    "**/*.test.ts",
+    "**/*.test.js",
+    "**/*.stories.tsx"
+  ],
+  "compilerOptions": {
+    "strict": false,
+    "baseUrl": ".",
+    "paths": {
+      "@techytools/uui/*": ["./*"]
+    },
+    "noEmit": true,
+    "incremental": true,
+    "noImplicitAny": false,
+    "jsx": "preserve",
+    "allowJs": true,
+    "lib": ["esnext", "dom"]
+  },
+  "typeRoots": ["node_modules/@types", "./types/typings.d.ts"],
+  "files": ["./types/typings.d.ts"]
+}
